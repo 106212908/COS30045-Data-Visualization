@@ -174,3 +174,11 @@ h2 {
 
     cursor: pointer;
 }
+
+/* FAQ  Button Hover Styling */
+
+.faq-question {
+
+    background-color: #1769aa;
+}
+
