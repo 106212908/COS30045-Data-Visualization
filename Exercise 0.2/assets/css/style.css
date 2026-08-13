@@ -57,3 +57,20 @@ p {
 
     padding: 10px 30px;
 }
+
+/* Logo Styling */
+
+.logo {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+}
+
+.logo-link:hover{
+
+    opacity: 0.75;
+
+}
