@@ -44,3 +44,16 @@ p {
   min-height: 90vh;    
         
 }
+
+/* Navigation Bar */
+
+.nav-bar{
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #0b3d62;
+
+    padding: 10px 30px;
+}
