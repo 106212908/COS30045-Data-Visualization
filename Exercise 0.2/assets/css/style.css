@@ -22,3 +22,25 @@ body {
 p {
     font-size: 17px;
 }
+
+/* Main Content Styling */
+
+.container {
+  
+  max-width: 1000px;
+ 
+  margin: 0 auto;
+
+  padding: 40px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;  
+
+  align-items: center;     
+
+  min-height: 90vh;    
+        
+}
