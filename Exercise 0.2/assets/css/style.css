@@ -136,9 +136,41 @@ h1 {
     margin-bottom: 20px;
 }
 
-h2{
+h2 {
 
     color: #1769aa;
 
     margin-top: 30px;
+}
+
+/* FAQ Section */
+
+.faq-item {
+
+    margin-top: 30px;
+}
+
+.faq-question {
+
+    width: 100%;
+
+    padding: 18px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color: #0b3d62;
+
+    color: white;
+
+    cursor: pointer;
 }
