@@ -175,10 +175,28 @@ h2 {
     cursor: pointer;
 }
 
-/* FAQ  Button Hover Styling */
+/* FAQ Button Hover Styling */
 
 .faq-question {
 
     background-color: #1769aa;
 }
 
+/* FAQ Answer Styling */
+
+.faq-answer {
+
+    display: none;
+
+    background-color: white;
+
+    padding: 15px;
+
+    border: 1px solid #d5d5d5;
+   
+}
+
+.faq-answer.show {
+
+    display: block;
+}
