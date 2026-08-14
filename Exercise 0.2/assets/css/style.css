@@ -177,7 +177,7 @@ h2 {
 
 /* FAQ Button Hover Styling */
 
-.faq-question {
+.faq-question:hover {
 
     background-color: #1769aa;
 }
