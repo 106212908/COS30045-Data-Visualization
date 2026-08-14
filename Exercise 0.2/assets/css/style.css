@@ -237,3 +237,22 @@ h2 {
     }
 
 }
+
+/* Footer at bottom of viewport */
+html, body {
+  height: 100%;          
+  margin: 0;             
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;               
+}
+
+.footer {
+  background-color: #0b3d62;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
