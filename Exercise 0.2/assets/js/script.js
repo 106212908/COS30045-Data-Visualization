@@ -12,3 +12,11 @@ questions.forEach(function(question){
 
     });
 });
+
+/* Current Year */
+
+const currentYear = new Date().getFullYear();
+
+const yearElement = document.getElementById("current-year")
+
+yearElement.textContent = currentYear;
