@@ -190,3 +190,21 @@ h2 {
 
     display: block;
 }
+
+/* Footer Styling */
+
+.footer {
+
+    margin-top: 55px;
+
+    padding: 10px 30px;
+
+    background-color: #0b3d62;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+
+}
