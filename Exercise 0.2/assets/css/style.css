@@ -208,3 +208,32 @@ h2 {
     font-size: 14px;
 
 }
+
+/* Responsive Design For Phones and Tablets */
+
+@media (max-width: 600px) {
+
+
+    .nav-bar {
+
+        flex-direction: column;
+
+    }
+
+    .nav-links {
+
+        margin-left: 0;
+
+        margin-top: 10px;
+
+        width: 100%;
+
+    }
+
+    .nav-link {
+
+        text-align: center;
+
+    }
+
+}
