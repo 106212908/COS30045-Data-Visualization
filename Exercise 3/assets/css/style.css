@@ -39,6 +39,8 @@ p {
 
 .nav-bar{
 
+    position: relative;
+
     display: flex;
 
     align-items: center;
@@ -69,11 +71,15 @@ p {
 
 .nav-links {
 
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
     display: flex;
-
-    justify-content: center;
-
-    flex: 1;
 
     margin: 0;
 }
@@ -209,34 +215,6 @@ h2 {
 
 }
 
-/* Responsive Design For Phones and Tablets */
-
-@media (max-width: 600px) {
-
-
-    .nav-bar {
-
-        flex-direction: column;
-
-    }
-
-    .nav-links {
-
-        margin-left: 0;
-
-        margin-top: 10px;
-
-        width: 100%;
-
-    }
-
-    .nav-link {
-
-        text-align: center;
-
-    }
-
-}
 
 /* Footer at bottom of viewport */
 html, body {
@@ -283,4 +261,8 @@ main {
     color: white;
     font-size: 24px;
     font-weight: bold;
+}
+
+html {
+    scrollbar-gutter: stable;
 }
