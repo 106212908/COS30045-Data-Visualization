@@ -256,3 +256,18 @@ main {
   text-align: center;
   padding: 15px;
 }
+
+.visualisation {
+    margin: 20px 0;
+    padding: 16px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #b0bac5;
+    max-width: 1000px;
+    margin: 30px auto;
+}
