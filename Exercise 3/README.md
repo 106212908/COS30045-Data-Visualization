@@ -14,80 +14,68 @@ You must use the **Exercise 3 folder in your existing forked repository** and re
 
 ### Audience
 
-The target audience for this visualisation includes:
+The target audience for this data story is consumers who are considering purchasing a new television.
 
-- Consumers interested in **energy-efficient televisions**
-- Policy makers and regulators interested in **energy consumption trends**
-- Researchers studying **energy efficiency in consumer electronics**
+The audience is interested in understanding how different characteristics of televisions relate to energy consumption. In particular, they may want to know whether purchasing a larger television results in substantially higher energy consumption and whether other TV characteristics may influence energy use.
 
-These audiences are interested in understanding how **television energy consumption varies across models, sizes, and technologies**, and how these factors influence overall energy usage.
 
 ### Story Overview
 
-This visualisation explores patterns in **TV energy consumption** across different television models and specifications.
+This visualisation explores different patterns in TV consumptions across different television models.
 
 The goal is to help viewers understand:
 
 - How energy consumption varies between television models
-- The relationship between **screen size and power consumption**
-- How **energy efficiency ratings** impact energy usage
-- Trends that may help consumers choose more **energy-efficient televisions**
+- The relationship between screen size and energy consumption
+- How energy efficiency ratings impact energy usage
 
 The website presents these insights through visualisations and explanatory text that guide the viewer through the data.
-
----
 
 ## About the Data
 
 ### Data Source
 
-The dataset used in this project contains information about **television models and their energy consumption characteristics**, including power usage, screen size, technology type, and efficiency ratings.
-
-The dataset was provided as part of the course materials.
+The televisions category of the Australian Government Energy Rating registered items database (energyrating.gov.au) was extracted on February 15, 2026. There are 4,724 rows in the extract.
 
 ### Data Processing
 
 Before creating visualisations, the dataset was processed to ensure it was suitable for analysis. This included:
 
-- Cleaning missing or inconsistent values
-- Selecting relevant attributes for visualisation
-- Organising the data into formats suitable for web visualisation
+- Removing/ handled missing values
+- Selecting relevant columns
+- Grouped TV by screen size
+- Calculated average energy consumption
 
 ### Privacy
 
-The dataset does not contain any **personal or sensitive information**. It focuses solely on product specifications and energy consumption data related to television devices.
+The dataset does not contain personally identifiable information.
 
 ### Accuracy and Limitations
 
 While the dataset provides useful information about TV energy consumption, there are some limitations:
 
-- The dataset may not include **all available television models**
-- Some information may be **outdated or incomplete**
-- Energy consumption may vary depending on **real-world usage conditions**
+- The dataset may not represent every television available on the market
+- Average values may hide differences between TV models
+- Energy consumption may vary depending on the usage condition
 
-These factors should be considered when interpreting the visualisations.
+These factors should be considered when interpreting visualisation.
 
 ### Ethics
 
-When presenting data visualisations, it is important to ensure that the information is represented **accurately and responsibly**.
-
 This project follows ethical data visualisation practices by:
 
-- Avoiding misleading visual representations
+- Avoiding implying that one characteristics alone determines the cause when other factors might also contribute
 - Clearly explaining the context of the data
-- Presenting information transparently so viewers can interpret the results correctly
+- Presenting information accurately without misleading the audience.
 
 ---
 
 ## AI Declaration
 
-Artificial Intelligence (AI) tools may have been used to assist with aspects of this assignment, such as:
+Gen AI tools (ChatGPT) were used to assist with website development.
 
-- Generating example code
-- Improving code structure
-- Assisting with documentation writing
+The analysis, interpretation of the dataset and final decisions regarding the visualisations were reviewed and validated by me.
 
-All AI-generated assistance was reviewed, modified where necessary, and integrated responsibly into the project.
 
 ---
 
