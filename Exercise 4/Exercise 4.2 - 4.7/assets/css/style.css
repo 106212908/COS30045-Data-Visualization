@@ -256,3 +256,10 @@ main {
   text-align: center;
   padding: 15px;
 }
+
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px; 
+}
