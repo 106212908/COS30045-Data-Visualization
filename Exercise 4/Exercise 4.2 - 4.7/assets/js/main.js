@@ -1,6 +1,6 @@
 const svg = d3.select(".responsive-svg-container")
     .append("svg")
-      .attr("viewBox", "0 0 1200 1600")
+      .attr("viewBox", "0 0 500 500")
       .style("border", "1px solid black");
 
 d3.csv("assets/data/TV_Data.csv", d => {
@@ -20,8 +20,14 @@ d3.csv("assets/data/TV_Data.csv", d => {
 
 const drawBarChart = data => {
 
-    const barHeight = 20;
-    const barSpacing = 5;
+    const xScale = d3.scaleLinear()
+        .domain([0, 1100])
+        .range([0, 500]);
+
+    const yScale = d3.scaleBand()
+        .domain(data.map(d => d.brand))
+        .range([0, 500])
+        .padding(0.1);
 
     svg
     .selectAll("rect")
@@ -31,9 +37,9 @@ const drawBarChart = data => {
     console.log(d);
      return `bar bar-${d.count}`;
  })
-    .attr("width", d => d.count)
-    .attr("height", barHeight)
+    .attr("width", d => xScale(d.count))
+    .attr("height", yScale.bandwidth())
     .attr("fill", "blue")
     .attr("x", 0)
-    .attr("y", (d, i) => i * (barHeight + barSpacing)
-)};
+    .attr("y", (d, i) => yScale(d.brand));
+};
