@@ -17,3 +17,23 @@ d3.csv("assets/data/TV_Data.csv", d => {
     data.sort((a,b) => b.count - a.count);
     drawBarChart(data);
 });
+
+const drawBarChart = data => {
+
+    const barHeight = 20;
+    const barSpacing = 5;
+
+    svg
+    .selectAll("rect")
+    .data(data)
+    .join("rect")
+    .attr("class", d => {
+    console.log(d);
+     return `bar bar-${d.count}`;
+ })
+    .attr("width", d => d.count)
+    .attr("height", barHeight)
+    .attr("fill", "blue")
+    .attr("x", 0)
+    .attr("y", (d, i) => i * (barHeight + barSpacing)
+)};
