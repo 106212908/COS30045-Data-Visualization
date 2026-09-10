@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    }
+
+h1 {
+     margin-top: 20px;
+    }
+
+.background {
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-right: 30px;
+    }
+
+.house {
+    fill: #f4c27a;
+    stroke: black;
+    stroke-width: 3;
+ }
+
+.window {
+    fill: lightcyan;
+    stroke: black;
+    stroke-width: 3;
+    }
