@@ -25,3 +25,20 @@ h1 {
     stroke: black;
     stroke-width: 3;
     }
+
+.tree {
+    fill: green;
+    stroke: darkgreen;
+    stroke-width: 2;
+}
+
+.window {
+    fill: lightcyan;
+    stroke: black;
+    stroke-width: 3;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+}
