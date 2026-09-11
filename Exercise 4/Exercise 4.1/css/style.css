@@ -54,3 +54,11 @@ h1 {
     stroke: orange;
     stroke-width: 3;
     }
+
+.after-tree {
+    fill: #EFA710;
+    stroke: #3F0E00;
+    stroke-width: 2;
+        
+    }
+
