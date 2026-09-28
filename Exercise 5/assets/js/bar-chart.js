@@ -22,6 +22,14 @@ const drawBarChart = data => {
     .attr("viewBox", `0 0 ${width} ${height}`)
     .style("border", "1px solid black")
 
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", 30)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "22px")
+        .attr("font-weight", "bold")
+        .text("Energy Consumption by Screen Type")
+
     const innerChart = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
