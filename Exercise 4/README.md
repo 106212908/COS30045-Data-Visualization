@@ -20,3 +20,19 @@ The exercises in this folder guide you through the fundamental concepts needed t
 
 - **Exercise 4.6 – Scaling charts**  
   Use D3 scales to map data values to positions in a chart.
+
+## What I did
+
+- Created a house using SVG shapes such as rectangles, lines, polygons and circles.
+- Used coordinates to position and size the SVG elements.
+- Loaded data from a CSV file for the bar chart.
+- Used D3 to bind data to SVG elements and create the bars.
+- Added scales and axes to show the data clearly.
+
+## Website links
+
+- SVG House:  -
+
+## Gen-AI Declaration
+
+My GenAI use for this exercise is covered in the separate declaration document submitted on Canvas.
