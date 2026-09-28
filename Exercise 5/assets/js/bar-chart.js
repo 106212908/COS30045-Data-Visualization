@@ -1,10 +1,13 @@
-d3.csv("assets/data/Data_exercise_5.1.csv").then(data => {
-    data.forEach(d => {
-        d.Energy_Consumption =
-            +d["Mean(Labelled energy consumption (kWh/year))"];
-    });
+d3.csv("assets/data/Data_exercise_5.1.csv", d => {
+    return{
+        screenTech: d.Screen_Tech,
+        energyConsumption: +d["Mean(Labelled energy consumption (kWh/year))"]
+    };
+}).then(data => {
+    data.sort((a, b) => 
+        b.energyConsumption - a.energyConsumption
+    );
 
-    data.sort((a, b) => b.Energy_Consumption - a.Energy_Consumption);
     console.log(data);
     drawBarChart(data);
 });
