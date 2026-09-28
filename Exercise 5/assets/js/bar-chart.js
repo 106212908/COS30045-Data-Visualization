@@ -14,7 +14,7 @@ d3.csv("assets/data/Data_exercise_5.1.csv", d => {
 
 const drawBarChart = data => {
 
-    const margin = { top: 45, right: 40, bottom: 50, left: 40};
+    const margin = { top: 70, right: 40, bottom: 50, left: 50};
     const width = 1000;
     const height = 500;
     const innerWidth = width - margin.left - margin.right;
@@ -27,7 +27,7 @@ const drawBarChart = data => {
 
     svg.append("text")
         .attr("x", width / 2)
-        .attr("y", 30)
+        .attr("y", 50)
         .attr("text-anchor", "middle")
         .attr("font-size", "22px")
         .attr("font-weight", "bold")
@@ -38,12 +38,12 @@ const drawBarChart = data => {
 
     // Create Scales
     const xScale = d3.scaleBand()
-        .domain(data.map(d => d.Screen_Tech))
+        .domain(data.map(d => d.screenTech))
         .range([0, innerWidth])
         .padding(0.1);
 
     const yScale = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.Energy_Consumption) * 1.12])
+        .domain([0, d3.max(data, d => d.energyConsumption) * 1.12])
         .range([innerHeight, 0]);
 
     const bottomAxis = d3.axisBottom(xScale)
@@ -73,17 +73,17 @@ const drawBarChart = data => {
         .join("rect")
             .attr("class", "bar")
             .attr("width", xScale.bandwidth())
-            .attr("height", d => innerHeight - yScale(d.Energy_Consumption))
-            .attr("x", d => xScale(d.Screen_Tech))
-            .attr("y", d => yScale(d.Energy_Consumption))
+            .attr("height", d => innerHeight - yScale(d.energyConsumption))
+            .attr("x", d => xScale(d.screenTech))
+            .attr("y", d => yScale(d.energyConsumption))
             .attr("fill", "green");
 
     innerChart.selectAll(".value-label")
         .data(data)
         .join("text")
             .attr("class", "value-label")
-            .attr("x", d => xScale(d.Screen_Tech) + xScale.bandwidth() / 2)
-            .attr("y", d => yScale(d.Energy_Consumption) - 6)
+            .attr("x", d => xScale(d.screenTech) + xScale.bandwidth() / 2)
+            .attr("y", d => yScale(d.energyConsumption) - 6)
             .attr("text-anchor", "middle")
-            .text(d => `${Math.round(d.Energy_Consumption)} kWh`);
+            .text(d => `${Math.round(d.energyConsumption)} kWh`);
 };
