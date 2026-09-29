@@ -28,6 +28,20 @@ const drawLineChart = data => {
     
     const innerChart = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    
+    innerChart
+        .append("text")
+        .text("Average Price")
+        .attr("x", -margin.left + 5)
+        .attr("y", -10)
+        .attr("text-anchor", "start")
+
+    innerChart
+        .append("text")
+        .text("Year")
+        .attr("x", 445)
+        .attr("y", 440)
+        .attr("text-anchor", "center")
 
     const xScale = d3.scaleLinear()
         .domain(d3.extent(data, d => d.year))
