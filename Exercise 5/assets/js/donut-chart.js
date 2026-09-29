@@ -1,12 +1,13 @@
-d3.csv("assets/data/Data_exercise_5.3.csv").then(data => {
-    data.forEach(d => {
-        d.screensizeCategory = d["Screensize_Category"]
-        d.count = +d["Count"]
-    })
+d3.csv("assets/data/Data_exercise_5.3.csv", d => {
+    return{
+        screensizeCategory: d["Screensize_Category"],
+        count: +d["Count"]
+    };
+}).then(data => {
 
     console.log(data);
     drawDonutChart(data);
-})
+});
 
 const drawDonutChart = data => {
     
