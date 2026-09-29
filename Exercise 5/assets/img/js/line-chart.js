@@ -18,8 +18,9 @@ const drawLineChart = data => {
 
     const svg = d3.select("#line-chart")
         .append("svg")
-        .attr("viewBox", `0 0 ${width} ${height}`);
-
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .style("border", "1 px solid black");
+    
     const innerChart = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -30,6 +31,11 @@ const drawLineChart = data => {
     const yScale = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.averagePrice)])
         .range([innerHeight, 0]);
+
+    const bottomAxis = d3.axisBottom(xScale)
+        .tickFormat(d3.format("d"));
+    
+    const leftAxis = d3.axisLeft(yScale);
 
     const lineGenerator = d3.line()
         .x(d => xScale(d.year))

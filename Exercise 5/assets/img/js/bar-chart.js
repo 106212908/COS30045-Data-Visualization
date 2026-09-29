@@ -24,6 +24,9 @@ const drawBarChart = data => {
     .append("svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
     .style("border", "1px solid black")
+    .style("width", "80%")
+    .style("margin", "30px auto")
+    .style("display", "block")
 
     svg.append("text")
         .attr("x", width / 2)
