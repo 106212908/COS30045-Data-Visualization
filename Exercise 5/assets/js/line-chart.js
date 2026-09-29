@@ -1,12 +1,14 @@
-d3.csv("assets/data/ARE_Spot_Prices.csv").then(data => {
-    data.forEach(d => {
-        d.year = +d["Year"]
-        d.averagePrice = +d["Average Price (notTas-Snowy)"]
-    })
+d3.csv("assets/data/ARE_Spot_Prices.csv", d => {
+    return{
+        year: +d["Year"],
+        averagePrice: +d["Average Price (notTas-Snowy)"]
+    };
+}).then(data => {
 
+    data.sort((a, b) => a.year - b.year);
     console.log(data);
     drawLineChart(data);
-})
+});
 
 const drawLineChart = data => {
     const margin = { top: 45, right: 40, bottom: 50, left: 40 };
@@ -19,7 +21,7 @@ const drawLineChart = data => {
     const svg = d3.select("#line-chart")
         .append("svg")
         .attr("viewBox", `0 0 ${width} ${height}`)
-        .style("border", "1 px solid black")
+        .style("border", "1px solid black")
         .style("width", "80%")
         .style("margin", "30px auto")
         .style("display", "block");
