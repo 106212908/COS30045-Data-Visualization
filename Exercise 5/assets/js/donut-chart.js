@@ -35,7 +35,10 @@ const drawDonutChart = data => {
     const svg = d3.select("#donut-chart")
         .append("svg")
         .attr("viewBox", `0, 0, ${width}, ${height}`)
-        .style("border", "1px solid black");
+        .style("border", "1px solid black")
+        .style("width", "80%")
+        .style("margin", "30px auto")
+        .style("display", "block");
 
     const innerChart = svg
         .append("g")

@@ -19,7 +19,10 @@ const drawLineChart = data => {
     const svg = d3.select("#line-chart")
         .append("svg")
         .attr("viewBox", `0 0 ${width} ${height}`)
-        .style("border", "1 px solid black");
+        .style("border", "1 px solid black")
+        .style("width", "80%")
+        .style("margin", "30px auto")
+        .style("display", "block");
     
     const innerChart = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
