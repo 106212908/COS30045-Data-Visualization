@@ -1,6 +1,6 @@
 d3.csv("assets/data/Data_exercise_5.1.csv", d => {
     return{
-        screenTech: d.Screen_Tech,
+        screenTech: d.Screen_Tech.trim().toUpperCase(), /* Converts screenTech values into Uppercase */
         energyConsumption: +d["Mean(Labelled energy consumption (kWh/year))"]
     };
 }).then(data => {
@@ -14,7 +14,7 @@ d3.csv("assets/data/Data_exercise_5.1.csv", d => {
 
 const drawBarChart = data => {
 
-    const margin = { top: 70, right: 40, bottom: 50, left: 50};
+    const margin = { top: 70, right: 50, bottom: 30, left: 70};
     const width = 1000;
     const height = 500;
     const innerWidth = width - margin.left - margin.right;
@@ -63,7 +63,7 @@ const drawBarChart = data => {
     innerChart
         .append("text")
         .text("Energy Consumption (kWh)")
-        .attr("x", -margin.left)
+        .attr("x", -margin.left + 10)
         .attr("y", -10)
         .attr("text-anchor", "start")
 
