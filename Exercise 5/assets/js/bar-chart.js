@@ -5,7 +5,7 @@ d3.csv("assets/data/Data_exercise_5.1.csv", d => {
     };
 }).then(data => {
     data.sort((a, b) => 
-        b.energyConsumption - a.energyConsumption
+        b.energyConsumption - a.energyConsumption // high to low
     );
 
     console.log(data);
