@@ -43,3 +43,29 @@ const updateHistogram = (filterId, data) => {
             .attr("height", d => innerHeight - yScale(d.length));
 }
 
+const createTooltip = (data) => {
+    
+    const tooltip = innerChartS
+        .append("g")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    tooltip
+        .append("rect")
+            .attr("width", tooltipWidth)
+            .attr("height", tooltipHeight)
+            .attr("rx", 3)
+            .attr("ry", 3)
+            .attr("fill-color", barColor)
+            .attr("fill-opacity", 0.75);
+
+    tooltip
+        .append("text")
+            .text("NA")
+            .attr("x", tooltipWidth /2)
+            .attr("y", tooltipHeight/2 + 2)
+            .attr("text-anchor", "middle")
+            .attr("alignment-baseline", "middle")
+            .attr("fill", "white")
+            .style("font-weight", 900);
+}
