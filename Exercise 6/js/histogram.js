@@ -53,5 +53,11 @@ const drawHistogram = (data) => {
         .attr("x", -margin.left + 20)
         .attr("y", -20)
         .attr("text-anchor", "start")
-
+    
+    innerChart.append("text")
+            .text("Labelled Energy Consumption (kWh/year)")
+            .attr("x", innerWidth - 120)
+            .attr("y", innerHeight + 40)
+            .attr("text-anchor", "middle")
+            .style("font-size", "15px")
 };
