@@ -20,3 +20,11 @@ const binGenerator = d3.bin()
 // Create axis 
 const bottomAxis = d3.axisBottom(xScale)
 const leftAxis = d3.axisLeft(yScale);
+
+// Array of filters
+const filters_screen = [
+    { id: "all", label: "All", isActive: true },
+    { id: "LED", label: "LED", isActive: false },
+    { id: "LCD", label: "LCD", isActive: false },
+    { id: "OLED", label: "OLED", isActive: false },
+];
