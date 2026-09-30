@@ -52,6 +52,7 @@ const drawScatterplot = (data) => {
         .attr("x", innerWidth  - 30)
         .attr("y", innerHeight + 40)
         .attr("text-anchor", "middle")
+        .style("font-size", "15px")
     
     const legend = svg
         .append("g")
