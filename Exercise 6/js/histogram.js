@@ -46,5 +46,12 @@ const drawHistogram = (data) => {
     innerChart
         .append("g")
         .call(leftAxis);
+    
+    innerChart
+        .append("text")
+        .text("Frequency")
+        .attr("x", -margin.left + 20)
+        .attr("y", -20)
+        .attr("text-anchor", "start")
 
 };
