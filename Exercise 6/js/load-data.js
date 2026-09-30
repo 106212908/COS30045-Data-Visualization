@@ -14,7 +14,11 @@ d3.csv("data/TVData_WithStar.csv", d => ({
     // Call function after data has been loaded
     drawHistogram(data);
     populateFilters(data);
-    
+
+    drawScatterplot(data);
+    createTooltip();
+    handleMouseEvents();
+
 }).catch(error => {
     console.error("Error loading the CSV file:", error)
 });
