@@ -5,6 +5,13 @@ const height = 400;
 const innerWidth = width - margin.left- margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 
+// inner chart variable for scatterplot
+let innerChartS;
+
+// tooltip dimension
+const tooltipWidth = 65;
+const tooltipHeight = 32;
+
 // Set up the colors
 const barColor = "#606464";
 const bodyBackgroundColor = "#fffaf0";
