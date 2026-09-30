@@ -16,3 +16,7 @@ const yScale = d3.scaleLinear();
 // Create bin generator
 const binGenerator = d3.bin()
     .value(d => d.energyConsumption)
+
+// Create axis 
+const bottomAxis = d3.axisBottom(xScale)
+const leftAxis = d3.axisLeft(yScale);
