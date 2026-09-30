@@ -22,7 +22,7 @@ const yScale = d3.scaleLinear();
 
 const xScaleS = d3.scaleLinear();
 const yScaleS = d3.scaleLinear();
-const colourScale = d3.scaleOrdinal()
+const colorScale = d3.scaleOrdinal()
 
 // Create bin generator
 const binGenerator = d3.bin()
