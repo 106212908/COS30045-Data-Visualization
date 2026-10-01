@@ -69,3 +69,33 @@ const createTooltip = (data) => {
             .attr("fill", "white")
             .style("font-weight", 900);
 }
+
+const handleMouseEvents = () => {
+    
+    innerChartS.selectAll("circle")
+
+    .on("mouseenter", (e, d) => {
+        console.log("Mouse entered circle", d);
+
+    
+        d3.select(".tooltip text")
+        .text(d.screenSize);
+
+        const cx = e.target.getAttribute("cx");
+        const cy = e.target.getAttribute("cy");
+
+        d3.select(".tooltip")
+            .attr("transform", `translate(${cx - 0.5*tooltipWidth}, ${cy - 1.5*tooltipHeight})`)
+            .transition()
+                .duration(200)
+                .style("opacity", 1);
+    })
+
+    .on("mouseleave", (e, d) => {
+        console.log("Mouse left circle", d);
+
+        d3.select(".tooltip")
+        .style("opacity", 0)
+        .attr("transform", `translate(0, 500)`);
+    });
+}
