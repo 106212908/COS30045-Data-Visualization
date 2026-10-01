@@ -66,7 +66,7 @@ const createTooltip = (data) => {
             .attr("y", tooltipHeight/2 + 2)
             .attr("text-anchor", "middle")
             .attr("alignment-baseline", "middle")
-            .attr("fill", "white")
+            .attr("fill", "black")
             .style("font-weight", 900);
 }
 
@@ -79,7 +79,7 @@ const handleMouseEvents = () => {
 
     
         d3.select(".tooltip text")
-        .text(d.screenSize);
+        .text(`${d.screenSize} | ${d.model} | ${d.brand}`);
 
         const cx = e.target.getAttribute("cx");
         const cy = e.target.getAttribute("cy");
