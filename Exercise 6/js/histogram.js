@@ -60,4 +60,8 @@ const drawHistogram = (data) => {
             .attr("y", innerHeight + 40)
             .attr("text-anchor", "middle")
             .style("font-size", "15px")
+
+    innerChart.selectAll("rect")
+        .append("title")
+        .text(d => `Energy Consumption: ${d.x0} - ${d.x1} kWh/year \nTV Count: ${d.length}`); 
 };
