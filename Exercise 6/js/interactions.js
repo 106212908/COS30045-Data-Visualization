@@ -56,7 +56,7 @@ const createTooltip = (data) => {
             .attr("height", tooltipHeight)
             .attr("rx", 3)
             .attr("ry", 3)
-            .attr("fill-color", barColor)
+            .attr("fill", barColor)
             .attr("fill-opacity", 0.75);
 
     tooltip

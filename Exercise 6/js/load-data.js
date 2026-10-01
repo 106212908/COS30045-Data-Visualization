@@ -17,7 +17,7 @@ d3.csv("data/TVData_WithStar.csv", d => ({
 
     drawScatterplot(data);
     createTooltip(data);
-    handleMouseEvents(data);
+    handleMouseEvents();
 
 }).catch(error => {
     console.error("Error loading the CSV file:", error)

@@ -4,7 +4,7 @@ const drawScatterplot = (data) => {
         .append("svg")
         .attr("viewBox", `0 0 ${width} ${height}`);
 
-    const innerChartS = svg
+    innerChartS = svg
         .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
