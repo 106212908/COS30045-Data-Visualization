@@ -22,6 +22,8 @@ const populateFilters = (data) => {
                     // Update the buttons based on which one was clicked
                     d3.selectAll("#filters_screen .filter")
                         .classed("active", filter => filter.id === d.id ? true : false);
+
+                    updateHistogram(d.id, data);
                 }   
             });       
 }
@@ -99,3 +101,4 @@ const handleMouseEvents = () => {
         .attr("transform", `translate(0, 500)`);
     });
 }
+ 
